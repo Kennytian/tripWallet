@@ -1,18 +1,11 @@
 import React, { PureComponent } from 'react';
-import { AsyncStorage, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { AsyncStorage, Text, TouchableOpacity, View } from 'react-native';
 import PropTypes from 'prop-types';
 // import wallet from 'trip-wallet';
-import trans from '../api/transactions';
+import trans from '../../api/transactions';
+import styles from './styles';
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
-
-class HomeScreen extends PureComponent {
+export default class Index extends PureComponent {
   static propTypes = {
     navigation: PropTypes.object,
   };
@@ -53,5 +46,3 @@ class HomeScreen extends PureComponent {
     );
   }
 }
-
-export default HomeScreen;
