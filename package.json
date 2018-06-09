@@ -1,10 +1,10 @@
 {
   "name": "tripWallet",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "private": true,
   "scripts": {
     "start": "node node_modules/react-native/local-cli/cli.js start",
-    "test": "jest",
+    "test": "node_modules/.bin/jest --coverage -u",
     "lint": "node_modules/.bin/eslint --ext .js ./src --fix --cache"
   },
   "dependencies": {
@@ -36,6 +36,11 @@
     "lint"
   ],
   "jest": {
-    "preset": "react-native"
+    "preset": "react-native",
+    "collectCoverage": true,
+    "coverageDirectory": "./coverage",
+    "testMatch": [
+      "**/__tests__/**/?(*.)(spec|test).js?(x)"
+    ]
   }
 }
