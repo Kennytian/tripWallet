@@ -1,7 +1,7 @@
 import { createStackNavigator } from 'react-navigation';
-import DetailScreen from './container/DetailScreen';
-import ListScreen from './container/listScreen';
-import HomeScreen from './container/HomeScreen';
+import DetailScreen from '../container/detail-screen';
+import ListScreen from '../container/list-screen';
+import HomeScreen from '../container/home-screen';
 
 const RootStack = createStackNavigator({
   Home: {

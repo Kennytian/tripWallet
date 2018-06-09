@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import RootStack from './routeConfig';
+import RootStack from './route/routeConfig';
 
 export default class App extends PureComponent {
   render() {
