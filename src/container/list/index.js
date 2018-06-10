@@ -6,6 +6,7 @@ import Button from '../components/Button';
 import Text from '../components/Text';
 import TextInput from '../components/TextInput';
 import styles from './styles';
+import I18n from '../../translations/i18n';
 
 export default class Index extends PureComponent {
   static navigationOptions = props => ({
@@ -14,7 +15,7 @@ export default class Index extends PureComponent {
         style={styles.headerRightButton}
         onPress={() => props.navigation.state.params.onClear()}
       >
-        <Text>Clear</Text>
+        <Text>{I18n.t('clear')}</Text>
       </Button>
     ),
   });
