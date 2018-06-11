@@ -10,9 +10,10 @@ import I18n from '../translations/i18n';
 export default {
   Home: {
     screen: Home,
-    navigationOptions: () => ({
-      title: I18n.t('home'),
-    }),
+    navigationOptions: {
+      header: null,
+      gesturesEnabled: false,
+    },
   },
   List: {
     screen: List,

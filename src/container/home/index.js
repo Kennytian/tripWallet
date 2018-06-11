@@ -1,9 +1,12 @@
 import React, { PureComponent } from 'react';
-import { AsyncStorage, Text, TouchableOpacity, View } from 'react-native';
+import { AsyncStorage, ImageBackground } from 'react-native';
 import PropTypes from 'prop-types';
 // import wallet from 'trip-wallet';
 import trans from '../../api/transactions';
 import styles from './styles';
+import imageSource from '../../const/imageSource';
+import HomeButton from './components/HomeButton';
+import I18n from '../../translations/i18n';
 
 export default class Index extends PureComponent {
   static propTypes = {
@@ -31,18 +34,26 @@ export default class Index extends PureComponent {
     console.log('nameResult:', nameResult);
   }
 
-  routeTo = () => {
-    this.props.navigation.navigate('List');
+  routeTo = name => () => {
+    this.props.navigation.navigate(name);
   };
 
   render() {
     return (
-      <View style={styles.container}>
-        <Text>Home Screen</Text>
-        <TouchableOpacity onPress={this.routeTo}>
-          <Text>Go to List</Text>
-        </TouchableOpacity>
-      </View>
+      <ImageBackground style={styles.container} source={imageSource.home_cover}>
+        <HomeButton
+          text={I18n.t('createWallet')}
+          style={styles.createButton}
+          textStyle={styles.createText}
+          onPress={this.routeTo('List')}
+        />
+        <HomeButton
+          text={I18n.t('importWallet')}
+          style={styles.importButton}
+          textStyle={styles.importText}
+          onPress={this.routeTo('Detail')}
+        />
+      </ImageBackground>
     );
   }
 }
