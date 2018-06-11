@@ -1,9 +1,24 @@
-import { StyleSheet } from 'react-native';
-
-export default StyleSheet.create({
+export default {
   container: {
-    flex: 1,
+    width: '100%',
+    height: '100%',
     alignItems: 'center',
     justifyContent: 'center',
   },
-});
+  cover: {
+
+  },
+  createText: {
+    color: '#fff',
+  },
+  importText: {
+    color: '#0097A7',
+  },
+  createButton: {
+    backgroundColor: '#0097A7',
+  },
+  importButton: {
+    backgroundColor: '#fff',
+    marginTop: 12,
+  },
+};
