@@ -5,9 +5,6 @@ export default {
     alignItems: 'center',
     justifyContent: 'center',
   },
-  cover: {
-
-  },
   createText: {
     color: '#fff',
   },
