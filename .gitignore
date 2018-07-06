@@ -57,4 +57,6 @@ buck-out/
 .eslintcache
 __snapshots__
 coverage/
+.cache/
+public/
 
