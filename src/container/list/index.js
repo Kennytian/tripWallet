@@ -7,8 +7,10 @@ import Text from '../components/Text';
 import TextInput from '../components/TextInput';
 import styles from './styles';
 import I18n from '../../translations/i18n';
+import TrackHoc from '../components/TrackHoc';
+import iiHOC from '../components/IIHoc';
 
-export default class Index extends PureComponent {
+class Index extends PureComponent {
   static navigationOptions = props => ({
     headerRight: (
       <Button
@@ -70,3 +72,5 @@ export default class Index extends PureComponent {
     );
   }
 }
+
+export default iiHOC(Index, 'ListIndex');

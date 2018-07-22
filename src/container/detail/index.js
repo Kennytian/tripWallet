@@ -2,8 +2,9 @@ import React, { PureComponent } from 'react';
 import { View, Text } from 'react-native';
 // import PropTypes from 'prop-types';
 import styles from './styles';
+import TrackHoc from '../components/TrackHoc';
 
-export default class Index extends PureComponent {
+class Index extends PureComponent {
   // static propTypes = {
   //   navigation: PropTypes.object,
   // };
@@ -20,3 +21,5 @@ export default class Index extends PureComponent {
     );
   }
 }
+
+export default TrackHoc(Index, 'DetailIndex');
